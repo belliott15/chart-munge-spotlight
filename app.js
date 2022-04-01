@@ -1,22 +1,18 @@
 
   // Bar chart showing number of customers by each purchase frequency.
 
-const labels = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-];
+import { coolFactor, customerGender, purchaseFrequency } from './data-utils.js';
+
+const countMap = purchaseFrequency();
+const labels = Object.keys(countMap);
 
 const data = {
     labels: labels,
     datasets: [{
-        label: 'My First dataset',
-        backgroundColor: 'rgb(255, 99, 132)',
+        label: 'Purchase Frequency',
+        backgroundColor: ('purple'),
         borderColor: 'rgb(255, 99, 132)',
-        data: [0, 10, 5, 2, 20, 30, 45],
+        data: Object.values(countMap),
     }]
 };
 
@@ -32,19 +28,21 @@ const myBarChart = new Chart(
 );
 
   // Line chart showing number of customers by each cool factor.
+const coolCount = coolFactor();
+const coolLables = Object.keys(coolCount);
+
 const lineData = {
-    labels: labels,
+    labels: coolLables,
     datasets: [{
-        label: 'My First dataset',
-        backgroundColor: 'rgb(255, 99, 132)',
+        label: 'Cool Factor per Customer',
+        backgroundColor: ('forestgreen'),
         borderColor: 'rgb(255, 99, 132)',
-        data: [0, 10, 5, 2, 20, 30, 45],
+        data: Object.values(coolCount),
     }]
 };
 const lineConfig = {
     type: 'line',
-    data: data,
-    options: {}
+    data: lineData,
 };
 
 const myLineChart = new Chart(
@@ -54,19 +52,22 @@ const myLineChart = new Chart(
   // Pie chart showing number of customers by each gender. 
     // Make sure you have enough colors in your chart data to make 
     // the pie chart readable.
+const genderOfCustomer = customerGender();
+const pieLables = Object.keys(genderOfCustomer);
+
 const pieData = {
-    labels: labels,
+    labels: pieLables,
     datasets: [{
-        label: 'My First dataset',
-        backgroundColor: 'rgb(215, 90, 131)',
+        label: 'Customers By Gender',
+        backgroundColor: ['beige', 'orange', 'yellow', 'green', 'blue',
+            'indigo', 'violet', 'red'],
         borderColor: 'rgb(200, 99, 132)',
-        data: [0, 10, 5, 2, 20, 30, 45],
+        data: Object.values(genderOfCustomer),
     }]
 };
 const pieConfig = {
     type: 'pie',
-    data: data,
-    options: {}
+    data: pieData,
 };
   
 const mypieChart = new Chart(
@@ -74,3 +75,4 @@ const mypieChart = new Chart(
     pieConfig
 );
 
+purchaseFrequency();
