@@ -11,7 +11,7 @@ const data = {
     datasets: [{
         label: 'Purchase Frequency',
         backgroundColor: ('purple'),
-        borderColor: 'rgb(255, 99, 132)',
+        borderColor: ('aqua'),
         data: Object.values(countMap),
     }]
 };
@@ -36,7 +36,7 @@ const lineData = {
     datasets: [{
         label: 'Cool Factor per Customer',
         backgroundColor: ('forestgreen'),
-        borderColor: 'rgb(255, 99, 132)',
+        borderColor: 'aqua',
         data: Object.values(coolCount),
     }]
 };
