@@ -31,6 +31,7 @@ const myBarChart = new Chart(
   // Line chart showing number of customers by each cool factor.
 const coolCount = coolFactor();
 const coolLables = Object.keys(coolCount);
+console.log(coolCount);
 
 const lineData = {
     labels: coolLables,
