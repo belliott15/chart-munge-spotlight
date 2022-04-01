@@ -22,6 +22,7 @@ const config = {
     options: {}
 };
 
+//eslint-disable-next-line
 const myBarChart = new Chart(
     document.getElementById('barChart'),
     config
@@ -44,7 +45,7 @@ const lineConfig = {
     type: 'line',
     data: lineData,
 };
-
+//eslint-disable-next-line
 const myLineChart = new Chart(
     document.getElementById('lineChart'),
     lineConfig
@@ -69,7 +70,7 @@ const pieConfig = {
     type: 'pie',
     data: pieData,
 };
-  
+//eslint-disable-next-line
 const mypieChart = new Chart(
     document.getElementById('pieChart'),
     pieConfig
