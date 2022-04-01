@@ -5,8 +5,6 @@ import { purchaseFrequency, coolFactor, customerGender } from '../data-utils.js'
 
 const test = QUnit.test;
 
-const testArray = 
-
 test('bar chart graph should give an object of frequency and how many times they are used in the array', (expect) => {
     //Arrange
     // Set up your arguments and expectations
