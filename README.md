@@ -11,3 +11,5 @@ Deploy your code on netlify and write tested "munge functions" for each chart. S
 ### Stretch goals
 1) Bar chart showing average cool factor of each age demographic (0 - 10, 11 - 20, 21 - 30, etc)
 1) Line chart showing most frequent "purchase frequency" for each decade of customer demographic (1920 - 1929, 1930 - 1939, 1940 - 1949, etc)
+
+change for push
